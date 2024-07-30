@@ -1,0 +1,258 @@
+{
+  "last_node_id": 17,
+  "last_link_id": 14,
+  "nodes": [
+    {
+      "id": 15,
+      "type": "PreviewImage",
+      "pos": [
+        1127,
+        118
+      ],
+      "size": {
+        "0": 390.6666259765625,
+        "1": 348.66668701171875
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 11,
+          "label": "图像"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 13,
+      "type": "PreviewImage",
+      "pos": [
+        767,
+        264
+      ],
+      "size": {
+        "0": 255.33331298828125,
+        "1": 313.66668701171875
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 8,
+          "label": "图像"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 14,
+      "type": "ASVL",
+      "pos": [
+        782,
+        118
+      ],
+      "size": {
+        "0": 315,
+        "1": 78
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image_one",
+          "type": "IMAGE",
+          "link": 9,
+          "label": "image_one"
+        },
+        {
+          "name": "image_two",
+          "type": "IMAGE",
+          "link": 10,
+          "label": "image_two"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "merged_image",
+          "type": "IMAGE",
+          "links": [
+            11
+          ],
+          "shape": 3,
+          "label": "merged_image",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ASVL"
+      },
+      "widgets_values": [
+        "horizontal"
+      ]
+    },
+    {
+      "id": 9,
+      "type": "LoadImage",
+      "pos": [
+        85,
+        131
+      ],
+      "size": {
+        "0": 315,
+        "1": 314
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            4,
+            7
+          ],
+          "shape": 3,
+          "label": "图像",
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3,
+          "label": "遮罩"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "R.jpg",
+        "image"
+      ]
+    },
+    {
+      "id": 12,
+      "type": "ASVL",
+      "pos": [
+        422,
+        122
+      ],
+      "size": {
+        "0": 315,
+        "1": 78
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image_one",
+          "type": "IMAGE",
+          "link": 4,
+          "label": "image_one"
+        },
+        {
+          "name": "image_two",
+          "type": "IMAGE",
+          "link": 7,
+          "label": "image_two"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "merged_image",
+          "type": "IMAGE",
+          "links": [
+            8,
+            9,
+            10
+          ],
+          "shape": 3,
+          "label": "merged_image",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ASVL"
+      },
+      "widgets_values": [
+        "vertical"
+      ]
+    }
+  ],
+  "links": [
+    [
+      4,
+      9,
+      0,
+      12,
+      0,
+      "IMAGE"
+    ],
+    [
+      7,
+      9,
+      0,
+      12,
+      1,
+      "IMAGE"
+    ],
+    [
+      8,
+      12,
+      0,
+      13,
+      0,
+      "IMAGE"
+    ],
+    [
+      9,
+      12,
+      0,
+      14,
+      0,
+      "IMAGE"
+    ],
+    [
+      10,
+      12,
+      0,
+      14,
+      1,
+      "IMAGE"
+    ],
+    [
+      11,
+      14,
+      0,
+      15,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1,
+      "offset": [
+        -15.3333740234375,
+        16.00006103515625
+      ]
+    }
+  },
+  "version": 0.4
+}
