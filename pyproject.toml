@@ -1,0 +1,14 @@
+[project]
+name = "comfyui_merge_asvl"
+description = "This is a simple node for connecting images. For pictures of the same size, users can choose to fill in vertical in the parameter to connect the pictures vertically or fill in horizontal to connect the pictures horizontally."
+version = "1.0.0"
+license = {file = "LICENSE"}
+
+[project.urls]
+Repository = "https://github.com/aisabervisionlab/ComfyUI_merge_ASVL"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI_merge_ASVL"
+Icon = ""
